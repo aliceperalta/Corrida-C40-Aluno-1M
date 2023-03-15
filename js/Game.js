@@ -31,14 +31,11 @@ class Game {
     cars = [car1, car2];
 
     // C38 AP
-    fuels = new Group();
-    powerCoins = new Group();
+    //criar novo grupo para fuels e powerCoins
 
     // Adicione o sprite de combustível ao jogo
-    this.addSprites(fuels, 4, fuelImage, 0.02);
 
     // Adicione o sprite de moeda ao jogo
-    this.addSprites(powerCoins, 18, powerCoinImage, 0.09);
   }
 
   // C38 AP
@@ -108,12 +105,7 @@ class Game {
 
   handleFuel(index) {
     // Adicione o combustível
-    cars[index - 1].overlap(fuels, function(collector, collected) {
-      player.fuel = 185;
-      //collected (coletado) é o sprite no grupo de colecionáveis que desencadeia
-      //o evento
-      collected.remove();
-    });
+   
   }
 
   handlePowerCoins(index) {
