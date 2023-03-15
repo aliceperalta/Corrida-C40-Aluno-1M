@@ -41,16 +41,7 @@ class Game {
   // C38 AP
   addSprites(spriteGroup, numberOfSprites, spriteImage, scale) {
     for (var i = 0; i < numberOfSprites; i++) {
-      var x, y;
-
-      x = random(width / 2 + 150, width / 2 - 150);
-      y = random(-height * 4.5, height - 400);
-
-      var sprite = createSprite(x, y);
-      sprite.addImage("sprite", spriteImage);
-
-      sprite.scale = scale;
-      spriteGroup.add(sprite);
+     
     }
   }
 
@@ -81,14 +72,9 @@ class Game {
         cars[index - 1].position.x = x;
         cars[index - 1].position.y = y;
 
-        // C38  AA
+        // C38  Marcar o jogador
         if (index === player.index) {
-          stroke(10);
-          fill("red");
-          ellipse(x, y, 60, 60);
-
-          this.handleFuel(index);
-          this.handlePowerCoins(index);
+          
 
         }
       }
