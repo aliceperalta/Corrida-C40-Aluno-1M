@@ -30,7 +30,7 @@ class Game {
 
     cars = [car1, car2];
 
-    // C38 AP
+    // C40
     //criar novo grupo para fuels e powerCoins
 
     // Adicione o sprite de combustível ao jogo
@@ -38,7 +38,7 @@ class Game {
     // Adicione o sprite de moeda ao jogo
   }
 
-  // C38 AP
+  // C40
   addSprites(spriteGroup, numberOfSprites, spriteImage, scale) {
     for (var i = 0; i < numberOfSprites; i++) {
      
@@ -72,7 +72,7 @@ class Game {
         cars[index - 1].position.x = x;
         cars[index - 1].position.y = y;
 
-        // C38  Marcar o jogador
+        // C40  Marcar o jogador atual com o ellipse/circulo vermelho
         if (index === player.index) {
           
 
@@ -90,7 +90,7 @@ class Game {
   }
 
   handleFuel(index) {
-    // Adicione o combustível
+    // C40 Adicione o combustível como foi feito com as moedas (PowerCoins)
    
   }
 
